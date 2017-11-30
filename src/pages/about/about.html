@@ -1,11 +1,38 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-
-</ion-content>
+    <ion-navbar color="primary">
+      <ion-title>
+        Dados da sua empresa
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+   
+  <ion-content>
+   
+      <ion-card>
+        <ion-card-header>
+          Receita por mês
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #barCanvas></canvas>
+        </ion-card-content>
+      </ion-card>
+   
+      <ion-card>
+        <ion-card-header>
+          Custos
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #doughnutCanvas></canvas>
+        </ion-card-content>
+      </ion-card>
+   
+      <ion-card>
+        <ion-card-header>
+          Lucros do semestre
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #lineCanvas></canvas>
+        </ion-card-content>
+      </ion-card>
+   
+  </ion-content>

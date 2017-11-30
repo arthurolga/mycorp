@@ -1,6 +1,8 @@
 {
   "name": "InsperApp",
-  "app_id": "",
+  "app_id": "a039b2ea",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

@@ -6,9 +6,12 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'contact.html'
 })
 export class ContactPage {
+  items : any[];
+  Artigos: any;
 
   constructor(public navCtrl: NavController) {
-
+    const newLocal = this.Artigos = "Noticias";
+    this.items = [];
   }
 
 }

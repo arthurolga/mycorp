@@ -1,17 +1,177 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Vendas</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <div padding>
+    <ion-segment [(ngModel)]="Produtos">
+      <ion-segment-button value="Comida">
+        Comida
+      </ion-segment-button>
+      <ion-segment-button value="Bebida">
+        Bebida
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="Produtos">
+    <ion-list *ngSwitchCase="'Comida'">
+      <ion-item>
+        <ion-card>
+          <img src="http://g.glbimg.com/og/gs/gsat5/f/thumbs/tag/2015/07/13/hamburguer-620.jpg"/>
+            <ion-card-header>
+              Maxi Burger
+            </ion-card-header>
+          
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+
+                    <ion-col col-s6>
+                        <h3> R$ 25,30 </h3>
+                    </ion-col>
+                    <button ion-button icon-only small color="danger">
+                      <ion-icon name="remove"></ion-icon>
+                    </button>
+                    <button ion-button icon-only small color="secondary">
+                      <ion-icon name="add"></ion-icon>
+                    </button>
+
+                </ion-row>
+              </ion-grid>
+              
+            </ion-card-content>
+          
+          </ion-card>
+      </ion-item>
+      <ion-item>
+        <ion-card>
+          <img src="https://i.ytimg.com/vi/JmmWHM4Ek4w/maxresdefault.jpg"/>
+            <ion-card-header>
+              Batata Frita
+            </ion-card-header>
+          
+            <ion-card-content>
+                <ion-grid>
+                    <ion-row>
+    
+                        <ion-col col-s6>
+                            <h3> R$ 5,50 </h3>
+                        </ion-col>
+                        <button ion-button icon-only small color="danger">
+                          <ion-icon name="remove"></ion-icon>
+                        </button>
+                        <button ion-button icon-only small color="secondary">
+                          <ion-icon name="add"></ion-icon>
+                        </button>
+    
+                    </ion-row>
+                </ion-grid>
+            </ion-card-content>
+          
+          </ion-card>
+      </ion-item>
+      <ion-item>
+        <ion-card>
+          <img src="http://mccainfoodservice.com.br/site/conteudo/uploads/Canoa-FINAL-FLUX.jpg"/>
+            <ion-card-header>
+              Batata Canoa
+            </ion-card-header>
+          
+            <ion-card-content>
+                <ion-grid>
+                    <ion-row>
+    
+                        <ion-col col-s6>
+                            <h3> R$ 5,50 </h3>
+                        </ion-col>
+                        <button ion-button icon-only small color="danger">
+                          <ion-icon name="remove"></ion-icon>
+                        </button>
+                        <button ion-button icon-only small color="secondary">
+                          <ion-icon name="add"></ion-icon>
+                        </button>
+    
+                    </ion-row>
+                </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-item>
+      
+    </ion-list>
+    
+    <ion-list *ngSwitchCase="'Bebida'">
+      <ion-item>
+        <ion-card>
+          <img src="http://www.ibahia.com/fileadmin/user_upload/ibahia/2017/fevereiro/25/suco.jpg"/>
+            <ion-card-header>
+              Suco
+            </ion-card-header>
+          
+            <ion-card-content>
+              <ion-grid>
+                  <ion-row>
+  
+                      <ion-col col-s6>
+                          <h3> R$ 5,50 </h3>
+                      </ion-col>
+                      <button ion-button icon-only small color="danger">
+                        <ion-icon name="remove"></ion-icon>
+                      </button>
+                      <button ion-button icon-only small color="secondary">
+                        <ion-icon name="add"></ion-icon>
+                      </button>
+  
+                  </ion-row>
+              </ion-grid>
+          </ion-card-content>
+          
+          </ion-card>
+      </ion-item>
+      <ion-item>
+        <ion-card>
+          <img src="http://blogs.gazetaonline.com.br/perdendopeso/wp-content/uploads/sites/43/2016/10/refrigerante-capa-e1476393261700.jpg"/>
+            <ion-card-header>
+              Refrigerante
+            </ion-card-header>
+          
+            <ion-card-content>
+              <ion-grid>
+                  <ion-row>
+  
+                      <ion-col col-s6>
+                          <h3> R$ 5,50 </h3>
+                      </ion-col>
+                      <button ion-button icon-only small color="danger">
+                        <ion-icon name="remove"></ion-icon>
+                      </button>
+                      <button ion-button icon-only small color="secondary">
+                        <ion-icon name="add"></ion-icon>
+                      </button>
+  
+                  </ion-row>
+              </ion-grid>
+          </ion-card-content>
+          
+          </ion-card>
+      </ion-item>
+    </ion-list>
+        
+  </div>
+        
+
+    
+  
+  
 </ion-content>
+<ion-footer>
+    <ion-toolbar>
+      
+        <button ion-button full color="secondary" (click)="presentToast('bottom')" >Vender!</button>
+      
+        
+    </ion-toolbar>
+    
+  </ion-footer>
